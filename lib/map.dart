@@ -128,7 +128,7 @@ class _mapState extends State<map> {
     var currentLocation;
     try {
       currentLocation = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
-      print('ok');
+
       controller.move(new LatLng(currentLocation.latitude,currentLocation.longitude), 0);
     } catch (e) {
       currentLocation = null;
